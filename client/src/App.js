@@ -14,7 +14,7 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 
 const httpLink = createHttpLink({
-  uri: 'graphql'
+  uri: '/graphql'
 });
 
 const client = new ApolloClient({
@@ -33,7 +33,7 @@ function App() {
                 <Route path = '/' element = {<Home />} />
                 <Route path = '/login' element = {<Login />} />
                 <Route path = '/signup' element = {<Signup />} />
-                <Route path = '/profile' element = {<Profile />} />
+                <Route path = '/profile?' element = {<Profile />} />
                 <Route path = '/thought/:id' element = {<SingleThought />} />
                 <Route path = '*' element = {<NoMatch />} />
               </Routes>
